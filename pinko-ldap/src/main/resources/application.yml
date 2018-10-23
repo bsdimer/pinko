@@ -1,0 +1,23 @@
+server:
+  port: ${port:8081}
+  error.whitelabel.enabled: false
+  compression:
+    enabled: true
+    min-response-size: 102400000
+    mime-types:
+      - text/html
+      - text/css
+      - text/plain
+      - text/xml
+      - application/json
+      - application/javascript
+  servlet:
+    context-path: /api/v1
+
+spring:
+  application.name: aossia-rad-api
+  ldap:
+    urls: ldap://localhost:389
+    base: dc=secal,dc=fr
+    username: cn=admin,dc=secal,dc=fr
+    password: P@ssp0rt
