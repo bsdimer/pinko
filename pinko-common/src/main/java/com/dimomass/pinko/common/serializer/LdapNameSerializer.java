@@ -1,11 +1,10 @@
-package com.dimomass.pinko.serializer;
+package com.dimomass.pinko.common.serializer;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 
-import javax.naming.Name;
 import javax.naming.ldap.LdapName;
 import java.io.IOException;
 

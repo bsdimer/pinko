@@ -1,6 +1,6 @@
-package com.dimomass.pinko.repository;
+package com.dimomass.pinko.common.repository;
 
-import com.dimomass.pinko.model.ContactEntry;
+import com.dimomass.pinko.common.model.ContactEntry;
 import org.springframework.ldap.core.AttributesMapper;
 
 import javax.naming.NamingEnumeration;

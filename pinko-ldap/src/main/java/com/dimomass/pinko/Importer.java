@@ -1,13 +1,9 @@
 package com.dimomass.pinko;
 
-import com.dimomass.pinko.model.ContactEntry;
-import com.dimomass.pinko.repository.ContactEntryOdmRepo;
-import org.apache.commons.lang.RandomStringUtils;
+import com.dimomass.pinko.common.repository.ContactEntryOdmRepo;
+import com.dimomass.pinko.common.repository.ContactEntryRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.PostConstruct;
-import java.util.Random;
 
 /**
  * Created by dimomass on 21.10.18.
@@ -17,7 +13,7 @@ public class Importer {
 
 
     @Autowired
-    ContactEntryOdmRepo contactEntryOdmRepo;
+    ContactEntryRepo contactEntryOdmRepo;
 
     /*@PostConstruct
     private void init() {

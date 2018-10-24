@@ -28,6 +28,7 @@ export class ContactManagementComponent implements OnInit {
       {field: 'mobile', header: 'mobile'},
       {field: 'mail', header: 'mail'}
     ];
+
     this.load();
   }
 

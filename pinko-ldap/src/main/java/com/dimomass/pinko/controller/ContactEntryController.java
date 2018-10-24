@@ -1,8 +1,9 @@
 package com.dimomass.pinko.controller;
 
-import com.dimomass.pinko.model.ContactEntry;
-import com.dimomass.pinko.repository.ContactEntryOdmRepo;
-import com.dimomass.pinko.serializer.ContactEntryDto;
+import com.dimomass.pinko.common.model.ContactEntry;
+import com.dimomass.pinko.common.repository.ContactEntryOdmRepo;
+import com.dimomass.pinko.common.repository.ContactEntryRepo;
+import com.dimomass.pinko.common.serializer.ContactEntryDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,7 @@ import java.util.List;
 @RequestMapping(value = "/contact")
 public class ContactEntryController {
 
-    private ContactEntryOdmRepo contactEntryOdmRepo;
+    private ContactEntryRepo contactEntryOdmRepo;
 
     @Autowired
     public ContactEntryController(ContactEntryOdmRepo contactEntryOdmRepo) {

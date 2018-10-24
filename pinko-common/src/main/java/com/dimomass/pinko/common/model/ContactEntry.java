@@ -1,6 +1,6 @@
-package com.dimomass.pinko.model;
+package com.dimomass.pinko.common.model;
 
-import com.dimomass.pinko.serializer.LdapNameSerializer;
+import com.dimomass.pinko.common.serializer.LdapNameSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.springframework.ldap.odm.annotations.Attribute;
 import org.springframework.ldap.odm.annotations.DnAttribute;

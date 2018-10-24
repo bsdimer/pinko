@@ -39,6 +39,7 @@ export class ContactEntryService {
 
 
   private handleError(error: HttpErrorResponse) {
+    this.appService.loading = false;
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);
     } else {

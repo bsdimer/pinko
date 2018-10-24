@@ -1,13 +1,9 @@
-package com.dimomass.pinko.serializer;
+package com.dimomass.pinko.common.serializer;
 
-import com.dimomass.pinko.model.ContactEntry;
+import com.dimomass.pinko.common.model.ContactEntry;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import org.springframework.ldap.odm.annotations.Attribute;
-import org.springframework.ldap.odm.annotations.DnAttribute;
-import org.springframework.ldap.odm.annotations.Id;
 
 import javax.naming.InvalidNameException;
-import javax.naming.Name;
 import javax.naming.ldap.LdapName;
 
 /**
