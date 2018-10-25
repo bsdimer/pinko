@@ -12,12 +12,19 @@ server:
       - application/json
       - application/javascript
   servlet:
-    context-path: /api/v1
+    context-path: /
 
 spring:
   application.name: pinko-dir
   ldap:
-    urls: ldap://localhost:389
-    base: dc=secal,dc=fr
-    username: cn=admin,dc=secal,dc=fr
-    password: P@ssp0rt
+    urls: ldap://10.1.16.126:389
+    base: OU=Users,OU=504,OU=Clients,DC=504dn,DC=aossia,DC=com
+    username: CN=ldap.voice,OU=_Service Objects,DC=aossia,DC=com
+    password: 6QNqw8xWbT
+
+directory:
+  instance: bertrange
+  hostname: 10.67.33.66
+  proto: http
+  type: microsoft
+  phoneProperty: ipPhone

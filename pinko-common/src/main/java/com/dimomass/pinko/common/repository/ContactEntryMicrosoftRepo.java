@@ -5,43 +5,47 @@ import org.springframework.ldap.core.LdapTemplate;
 
 import java.util.List;
 
-/**
- * Created by dimomass on 20.10.18.
- */
+import static org.springframework.ldap.query.LdapQueryBuilder.query;
 
-public class ContactEntryOdmRepo implements ContactEntryRepo {
+/**
+ * Created by dimomass on 24.10.18.
+ */
+public class ContactEntryMicrosoftRepo implements ContactEntryRepo {
+
 
     private LdapTemplate ldapTemplate;
 
-    public ContactEntryOdmRepo(LdapTemplate ldapTemplate) {
+    public ContactEntryMicrosoftRepo(LdapTemplate ldapTemplate) {
         this.ldapTemplate = ldapTemplate;
     }
 
+    @Override
     public ContactEntry create(ContactEntry contactEntry) {
-        ldapTemplate.create(contactEntry);
-        return contactEntry;
+        return null;
     }
 
+    @Override
     public ContactEntry update(ContactEntry contactEntry) {
-        ldapTemplate.update(contactEntry);
-        return contactEntry;
+        return null;
     }
 
+    @Override
     public ContactEntry save(ContactEntry contactEntry) {
-        if (contactEntry.getDn() == null) return create(contactEntry);
-        return update(contactEntry);
+        return null;
     }
 
+    @Override
     public void delete(ContactEntry contactEntry) {
-        ldapTemplate.delete(contactEntry);
+
     }
 
+    @Override
     public ContactEntry findOneByDn(String dn) {
-        return ldapTemplate.lookup(dn, new ContactEntryOpenldapAttributeMapper());
+        return null;
     }
 
+    @Override
     public List<ContactEntry> findAll() {
-        return ldapTemplate.findAll(ContactEntry.class);
+        return ldapTemplate.search("", "(objectClass=person)", new ContactEntryMicrosoftAttributeMapper());
     }
-
 }

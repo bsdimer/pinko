@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "directory.host",
+      "type": "java.lang.String",
+      "description": "Current hostname or IP address on which the service is listenting for requests"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ import javax.naming.ldap.LdapName;
 /**
  * Created by dimomass on 21.10.18.
  */
-public class ContactEntryAttributeMapper implements AttributesMapper<ContactEntry> {
+public class ContactEntryOpenldapAttributeMapper implements AttributesMapper<ContactEntry> {
 
     @Override
     public ContactEntry mapFromAttributes(Attributes attributes) throws NamingException {
