@@ -19,12 +19,12 @@
     <SoftKeyItem>
         <Name>Next</Name>
         <Position>4</Position>
-        <URL>${directory.proto}://${directory.hostname}:${directory.port}/ccmcip/xmldirectorylist.ftl?l=&amp;f=&amp;n=&amp;start=32</URL>
+        <URL>${directory.proto}://${directory.hostname}:${directory.port}/ccmcip/${directory.instance}/xmldirectorylist?l=&amp;f=&amp;n=&amp;start=${page.next}</URL>
     </SoftKeyItem>
     <SoftKeyItem>
         <Name>Search</Name>
         <Position>5</Position>
-        <URL>${directory.proto}://${directory.hostname}:${directory.port}/ccmcip/xmldirectoryinput.ftl?l=&amp;f=&amp;n=</URL>
+        <URL>${directory.proto}://${directory.hostname}:${directory.port}/ccmcip/${directory.instance}/xmldirectoryinput?l=&amp;f=&amp;</URL>
     </SoftKeyItem>
 <#list page.content as c>
     <DirectoryEntry>

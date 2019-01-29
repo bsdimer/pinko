@@ -4,6 +4,7 @@ import com.dimomass.pinko.common.model.ContactEntry;
 import org.springframework.ldap.core.LdapTemplate;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by dimomass on 20.10.18.
@@ -41,6 +42,11 @@ public class ContactEntryOdmRepo implements ContactEntryRepo {
     }
 
     public List<ContactEntry> findAll() {
+        return ldapTemplate.findAll(ContactEntry.class);
+    }
+
+    @Override
+    public List<ContactEntry> findAll(String base, String filter) {
         return ldapTemplate.findAll(ContactEntry.class);
     }
 

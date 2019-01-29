@@ -1,6 +1,11 @@
 server:
-  port: ${port:8082}
+  port: ${port:10901}
   error.whitelabel.enabled: false
+#  ssl:
+#    key-store-type: PKCS12
+#    key-store: classpath:aossia.p12
+#    key-store-password: 123456-Aa
+
   compression:
     enabled: true
     min-response-size: 102400000
@@ -18,13 +23,13 @@ spring:
   application.name: pinko-dir
   ldap:
     urls: ldap://10.1.16.126:389
-    base: OU=Users,OU=504,OU=Clients,DC=504dn,DC=aossia,DC=com
     username: CN=ldap.voice,OU=_Service Objects,DC=aossia,DC=com
     password: 6QNqw8xWbT
 
 directory:
   instance: bertrange
-  hostname: 10.67.33.66
+  hostname: 10.5.0.13
+  base: OU=Users,OU=504,OU=Clients,DC=504dn,DC=aossia,DC=com
   proto: http
   type: microsoft
   phoneProperty: ipPhone

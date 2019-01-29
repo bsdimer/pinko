@@ -2,8 +2,11 @@ package com.dimomass.pinko.common.repository;
 
 import com.dimomass.pinko.common.model.ContactEntry;
 import org.springframework.ldap.core.LdapTemplate;
+import org.springframework.ldap.query.LdapQuery;
 
+import javax.naming.Name;
 import java.util.List;
+import java.util.Map;
 
 import static org.springframework.ldap.query.LdapQueryBuilder.query;
 
@@ -46,6 +49,22 @@ public class ContactEntryMicrosoftRepo implements ContactEntryRepo {
 
     @Override
     public List<ContactEntry> findAll() {
-        return ldapTemplate.search("", "(objectClass=person)", new ContactEntryMicrosoftAttributeMapper());
+        return ldapTemplate.search(query().where("(").is("person"), new ContactEntryMicrosoftAttributeMapper());
+    }
+
+    @Override
+    public List<ContactEntry> findAll(String base, String filter) {
+
+        /*LdapQuery query = query()
+                .where("objectclass").is("person");
+                *//*.and("givenName").is(filter.get("f")[0])
+                .and("sn").is(filter.get("l")[0])
+                .and("ipPhone").is(filter.get("n")[0]);*/
+
+
+
+        return ldapTemplate.search(base, filter, new ContactEntryMicrosoftAttributeMapper());
+
+        // return ldapTemplate.search(query, new ContactEntryMicrosoftAttributeMapper());
     }
 }

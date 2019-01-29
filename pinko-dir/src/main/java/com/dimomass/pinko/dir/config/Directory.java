@@ -22,6 +22,9 @@ public class Directory {
     @Value("${directory.instance:default}")
     String instance;
 
+    @Value("${directory.base}")
+    String base;
+
     public String getHostname() {
         return hostname;
     }
@@ -52,5 +55,13 @@ public class Directory {
 
     public void setInstance(String instance) {
         this.instance = instance;
+    }
+
+    public String getBase() {
+        return base;
+    }
+
+    public void setBase(String base) {
+        this.base = base;
     }
 }

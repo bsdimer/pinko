@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dimomass</groupId>
+    <groupId>com.aossia</groupId>
     <artifactId>pinko-dir</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -12,10 +12,9 @@
     <description>Pinko directory service for CUCM</description>
 
     <parent>
-        <groupId>com.dimomass</groupId>
-        <artifactId>pinko-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.aossia</groupId>
+        <artifactId>aossia-parent</artifactId>
+        <version>0.0.3-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -38,11 +37,11 @@
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
         <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.dimomass</groupId>
+            <groupId>com.aossia</groupId>
             <artifactId>pinko-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -63,6 +62,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <addResources>true</addResources>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

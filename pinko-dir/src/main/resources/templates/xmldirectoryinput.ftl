@@ -17,7 +17,7 @@
         <Position>3</Position>
         <URL>SoftKey:Cancel</URL>
     </SoftKeyItem>
-    <URL>${directory.proto}://${directory.hostname}:${directory.port}/ccmcip/xmldirectorylist.ftl</URL>
+    <URL>${directory.proto}://${directory.hostname}:${directory.port}/ccmcip/${directory.instance}/xmldirectorylist</URL>
     <InputItem>
         <DisplayName>First Name</DisplayName>
         <QueryStringParam>f</QueryStringParam>

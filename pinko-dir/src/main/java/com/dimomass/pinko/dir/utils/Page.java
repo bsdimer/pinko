@@ -12,6 +12,7 @@ public class Page {
     int start;
     int end;
     int size;
+    int next;
     List<ContactEntry> content = new ArrayList<>();
 
     public int getStart() {
@@ -44,6 +45,14 @@ public class Page {
 
     public void setContent(List<ContactEntry> content) {
         this.content = content;
+    }
+
+    public int getNext() {
+        return next;
+    }
+
+    public void setNext(int next) {
+        this.next = next;
     }
 
     public static Page from(List<ContactEntry> result, int start) {
